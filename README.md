@@ -56,3 +56,4 @@ streamlit run main.py
 Ce projet a été réalisé dans le cadre du mémoire de Master 2 en **Statistique et Informatique Décisionnelle**.
 
 ---
+"# Application-main" 
