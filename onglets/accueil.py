@@ -4,6 +4,20 @@ import os
 from utils import LOGO_PATH  # On récupère ton chemin
 import base64
 
+import streamlit as st  # 👉 doit être importé avant d'utiliser st.set_page_config
+
+# 🟢 Cette ligne DOIT venir immédiatement après l'import de streamlit
+st.set_page_config(
+    page_title="Médecine IA - Accueil",
+    page_icon="🧬",
+    layout="wide"
+)
+
+from PIL import Image
+import os
+from utils import LOGO_PATH  # Si besoin
+import base64
+
 # Fonction pour convertir une image en base64 (obligatoire pour Streamlit)
 def get_base64_bg(path):
     with open(path, "rb") as image_file:
