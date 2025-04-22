@@ -23,6 +23,12 @@ def send_email(name, sender_email, message):
         <html>
           <body style="margin: 0; font-family: 'Segoe UI', sans-serif;">
             <div style="background: #f8faff; padding: 40px;">
+              <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+                <div style="padding: 40px; text-align: center;">
+                  <img src="https://i.ibb.co.com/logo.png" alt="MED-AI Logo" style="height: 60px; margin-bottom: 30px;">
+                  <div style="background: linear-gradient(135deg, #2e77d0, #22d3ee); padding: 20px; border-radius: 12px;">
+                    <h2 style="color: white; margin: 0;">Nouveau message de {name}</h2>
+                  </div>
                   <div style="padding: 30px 20px; text-align: left;">
                     <div style="margin-bottom: 25px;">
                       <p style="font-size: 16px; color: #444; margin: 8px 0;">
@@ -182,7 +188,7 @@ def contact():
         st.markdown("""
             <div class="footer">
                 <p>
-                     © 2025 <strong>MEDCINE-AI</strong> | Propulsé avec ❤️ par <strong>Mamadou Thierno FAYA </strong><br>
+                     © 2025 <strong>MEDCINE-AI</strong> | Propulsé avec ❤️ par <strong>Mamadou Thierno FAYE </strong><br>
                     Connectez-vous avec moi :
                     <a href="https://www.linkedin.com/in/mamadouthierno" target="_blank" class="footer-icon">🔗 LinkedIn</a>
                     <a href="https://twitter.com/mamadouthierno" target="_blank" class="footer-icon">🐦 Twitter</a>
