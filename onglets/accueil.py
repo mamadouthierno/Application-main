@@ -1,7 +1,7 @@
 from PIL import Image
 import streamlit as st
 import os
-from utils import LOGO_PATH
+from utils import LOGO_PATH  # On récupère ton chemin
 import base64
 
 st.set_page_config(
@@ -37,16 +37,16 @@ def accueil():
             }}
 
             .main-title {{
-                font-size: 20rem;
+                font-size: 6rem;
                 font-weight: bold;
-                color: green;  /* ✅ Changement ici */
+                color: #28a745 !important;
                 margin-bottom: 6rem;
                 animation: fadeInTitle 3s ease-in-out;
             }}
 
             .sub-title {{
-                font-size: 4rem;
-                color: green;  /* ✅ Changement ici */
+                font-size: 3rem;
+                color: #28a745 !important;
                 margin-bottom: 2rem;
                 animation: fadeInSubTitle 4s ease-in-out;
             }}
@@ -88,7 +88,7 @@ def accueil():
             }}
             .impression-section h2 {{
                 font-size: 3rem;
-                color: #1e3a8a;
+                color: #28a745 !important;
                 margin-bottom: 2rem;
             }}
             .impression-section p {{
@@ -149,6 +149,7 @@ def accueil():
             }}
         </style>
 
+        <!-- CONTENU HTML -->
         <div class="custom-bg">
             <h1 class="main-title">L'Ère Nouvelle de la Médecine Intelligente</h1>
             <h2 class="sub-title">Plateforme IA  pour la lutte contre les cancers Gastrique</h2>
