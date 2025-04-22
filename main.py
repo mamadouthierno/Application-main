@@ -2,7 +2,7 @@ import streamlit as st
 
 # ✅ Configuration de la page – doit être la toute première commande Streamlit
 st.set_page_config(
-    page_title="Shahidi",
+    page_title="Gastric",
     page_icon="⚕️",
     layout="wide",
     initial_sidebar_state="expanded"
