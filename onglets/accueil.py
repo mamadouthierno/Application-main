@@ -170,13 +170,13 @@ def accueil():
         <!-- Bloc principal avec image de fond -->
         <div class="custom-bg">
             <h1 class="main-title">L'Ère Nouvelle de la Médecine Intelligente</h1>
-            <h2 class="sub-title">Plateforme IA de pointe pour la lutte contre les cancers digestifs</h2>
-            <button class="custom-btn">Découvrir la Technologie</button>
+            <h2 class="sub-title">Plateforme IA  pour la lutte contre les cancers Gastrique</h2>
+            <button class="custom-btn">Une Technologie Innovante!</button>
         </div>
         <!-- SECTION IMPRESSIONNANTE -->
         <section class="impression-section">
-            <h2>Révolution dans la prise en charge des cancers digestifs</h2>
-            <p>Notre plateforme IA transforme l'oncologie digestive avec :</p>
+            <h2>Révolution dans la prise en charge des cancers Gastrique</h2>
+            <p>Notre plateforme IA transforme l'oncologie Gastrique avec :</p>
             <ul class="benefits">
                 <li>Modèles prédictifs de survie certifiés</li>
                 <li>Protocoles thérapeutiques optimisés par IA</li>
