@@ -77,13 +77,18 @@ def a_propos():
     # Équipe de Recherche
     st.markdown("## Équipe de Recherche", unsafe_allow_html=True)
     cols = st.columns(3)
-    team_members = [
-        {"photo": "assets/team/bousso.jpeg", "name": "Pr. Mamadou BOUSSO", "role": "Maitre conferencier"},
-        {"photo": "assets/team/allaya.jpeg", "name": "Dr. Mouhamad M. ALLAYA", "role": "Prof Statistique & Data Scientist"},
-        {"photo": "assets/team/faye.jpeg", "name": "M. Mamadou Thierno FAYE", "role": "Ingénieur Data Scientist"}
-    ]
+team_members = [
+    {"photo": "assets/bousso.PNG", "name": "Pr. Mamadou BOUSSO", "role": "Maitre conferencier"},
+    {"photo": "assets/allaya.jpeg", "name": "Dr. Mouhamad M. ALLAYA", "role": "Prof Statistique & Data Scientist"},
+    {"photo": "assets/mamadou.jpg", "name": "M. Mamadou Thierno FAYE", "role": "Ingénieur Data Scientist"},
+    {"photo": "assets/samb.jpeg", "name": "Dr. Fatou SAMB", "role": "Oncologue Médical"},
+    {"photo": "assets/sy.jpeg", "name": "Pr. Binta SY", "role": "Épidémiologiste"}
+]
 
-    for col, member in zip(cols, team_members):
+for i in range(0, len(team_members), 3):
+    row = team_members[i:i+3]
+    cols = st.columns(len(row))
+    for col, member in zip(cols, row):
         with col:
             try:
                 st.markdown(f"""
