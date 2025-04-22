@@ -1,11 +1,6 @@
-import sys
-import os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
 import streamlit as st
-from onglets import accueil, analyse_descriptive, modelisation, a_propos, contact
 
-# Configuration de la page
+# ✅ Configuration de la page – doit être la toute première commande Streamlit
 st.set_page_config(
     page_title="Shahidi",
     page_icon="⚕️",
@@ -13,7 +8,14 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Dictionnaire des pages
+# 📦 Imports restants
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+from onglets import accueil, analyse_descriptive, modelisation, a_propos, contact
+
+# 🔀 Dictionnaire des pages
 PAGES = {
     "🏠 Accueil": accueil,
     "📊 Analyse": analyse_descriptive,
