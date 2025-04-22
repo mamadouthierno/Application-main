@@ -151,10 +151,16 @@ def accueil():
         </div>
 
         <!-- SECTION IMPRESSIONNANTE -->
-        <div class="impression-section">
-            <h2>Un Futur Prometteur avec l'IA</h2>
-            <p>Notre plateforme révolutionne l'approche diagnostique et thérapeutique des cancers digestifs, en vous offrant des prédictions de survie précises et des solutions innovantes basées sur l'intelligence artificielle.</p>
-            <button class="highlight-btn">Explorez Notre Solution</button>
-        </div>
+        <section class="impression-section">
+            <h2>Révolution dans la prise en charge des cancers digestifs</h2>
+            <p>Notre plateforme IA transforme l'oncologie digestive avec :</p>
+            <ul class="benefits">
+                <li>Modèles prédictifs de survie certifiés</li>
+                <li>Protocoles thérapeutiques optimisés par IA</li>
+                <li>Profilage moléculaire personnalisé</li>
+            </ul>
+            <div class="call-to-action">
+                <p>Rejoignez la médecine oncologique de demain</p>
+            </div>
     """, unsafe_allow_html=True)
 
