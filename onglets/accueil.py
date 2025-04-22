@@ -1,41 +1,31 @@
 from PIL import Image
 import streamlit as st
 import os
-from utils import LOGO_PATH  # On récupère ton chemin
+from utils import LOGO_PATH
 import base64
 
-import streamlit as st  # 👉 doit être importé avant d'utiliser st.set_page_config
-
-# 🟢 Cette ligne DOIT venir immédiatement après l'import de streamlit
 st.set_page_config(
     page_title="Médecine IA - Accueil",
     page_icon="🧬",
     layout="wide"
 )
 
-from PIL import Image
-import os
-from utils import LOGO_PATH  # Si besoin
-import base64
-
-# Fonction pour convertir une image en base64 (obligatoire pour Streamlit)
 def get_base64_bg(path):
     with open(path, "rb") as image_file:
         encoded = base64.b64encode(image_file.read()).decode()
     return f"data:image/jpeg;base64,{encoded}"
 
 def accueil():
-    bg_image = get_base64_bg("assets/background.jpeg")  # Image de fond
+    bg_image = get_base64_bg("assets/background.jpeg")
 
     st.markdown(f"""
         <style>
-            /* CONTENEUR PRINCIPAL AVEC FOND */
             .custom-bg {{
                 background-image: url("{bg_image}");
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
-                height: 80vh; /* 🔁 DIMINUE LA HAUTEUR ICI (ex: 70vh ou 60vh) */
+                height: 80vh;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -46,24 +36,21 @@ def accueil():
                 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
             }}
 
-            /* TITRE PRINCIPAL */
             .main-title {{
-                font-size: 20rem;  /* 🔁 AUGMENTE LA TAILLE ICI */
+                font-size: 20rem;
                 font-weight: bold;
-                color: red;     /* 🔁 COULEUR DU TITRE PRINCIPAL */
+                color: green;  /* ✅ Changement ici */
                 margin-bottom: 6rem;
                 animation: fadeInTitle 3s ease-in-out;
             }}
 
-            /* SOUS-TITRE */
             .sub-title {{
-                font-size: 4rem;  /* 🔁 AUGMENTE OU RÉDUIS ICI */
-                color: red;     /* 🔁 COULEUR DU SOUS-TITRE */
+                font-size: 4rem;
+                color: green;  /* ✅ Changement ici */
                 margin-bottom: 2rem;
                 animation: fadeInSubTitle 4s ease-in-out;
             }}
 
-            /* BOUTON */
             .custom-btn {{
                 padding: 10px 25px;
                 font-size: 1.2rem;
@@ -80,7 +67,6 @@ def accueil():
                 background: linear-gradient(45deg, #76f2b0, #6e7dff);
             }}
 
-            /* ANIMATION FADE IN */
             @keyframes fadeInTitle {{
                 0% {{ opacity: 0; transform: translateY(-50px); }}
                 100% {{ opacity: 1; transform: translateY(0); }}
@@ -94,7 +80,6 @@ def accueil():
                 100% {{ opacity: 1; transform: scale(1); }}
             }}
 
-            /* SECTION SUPPLÉMENTAIRE */
             .impression-section {{
                 background-color: #F0F4F8;
                 padding: 3rem 0;
@@ -129,7 +114,6 @@ def accueil():
                 100% {{ opacity: 1; transform: translateY(0); }}
             }}
 
-            /* CARROUSEL D'IMAGES */
             .carousel-section {{
                 display: flex;
                 justify-content: center;
@@ -165,15 +149,12 @@ def accueil():
             }}
         </style>
 
-        <!-- CONTENU HTML -->
-
-        <!-- Bloc principal avec image de fond -->
         <div class="custom-bg">
             <h1 class="main-title">L'Ère Nouvelle de la Médecine Intelligente</h1>
             <h2 class="sub-title">Plateforme IA  pour la lutte contre les cancers Gastrique</h2>
             <button class="custom-btn">Une Technologie Innovante!</button>
         </div>
-        <!-- SECTION IMPRESSIONNANTE -->
+
         <section class="impression-section">
             <h2>Révolution dans la prise en charge des cancers Gastrique</h2>
             <p>Notre plateforme IA transforme l'oncologie Gastrique avec :</p>
@@ -186,6 +167,6 @@ def accueil():
                 <p>Rejoignez la médecine oncologique de demain</p>
             </div>
     """, unsafe_allow_html=True)
+
 if __name__ == "__main__":
     accueil()
-
