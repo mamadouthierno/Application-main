@@ -9,7 +9,7 @@ SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 EMAIL_SENDER = "votre-email@gmail.com"
 EMAIL_PASSWORD = "12_SEFD"  
-EMAIL_RECEIVER = "sefdine668@gmail.com"
+EMAIL_RECEIVER = "mamadouthierno4@gmail.com"
 
 def send_email(name, sender_email, message):
     """Envoie un email avec un design HTML professionnel"""
@@ -17,7 +17,7 @@ def send_email(name, sender_email, message):
         msg = MIMEMultipart()
         msg["From"] = EMAIL_SENDER
         msg["To"] = EMAIL_RECEIVER
-        msg["Subject"] = f"📬 Nouveau contact SHAHIDI-AI : {name}"
+        msg["Subject"] = f"📬 Nouveau contact MDCINE-AI : {name}"
         
         html = f"""
         <html>
@@ -74,9 +74,9 @@ def contact():
         # En-tête
         st.markdown("""
             <div class='contact-header'>
-                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">📬 Contactez Notre Équipe Médicale</h1>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">📬 Contacte L'équipe Médicale</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">
-                    Une question ? Un projet ? Nous répondons sous 24h
+                    Question ? Projet ? Nous répondons dans les 24h
                 </p>
             </div>
         """, unsafe_allow_html=True)
@@ -90,7 +90,7 @@ def contact():
                 
                 # Formulaire
                 st.markdown("<div class='input-field'>", unsafe_allow_html=True)
-                name = st.text_input("Nom Complet *", placeholder="Dr. Ahmed Sefdine")
+                name = st.text_input("Nom Complet *", placeholder="Dr. SAMB")
                 st.markdown("</div>", unsafe_allow_html=True)
                 
                 st.markdown("<div class='input-field'>", unsafe_allow_html=True)
@@ -113,10 +113,10 @@ def contact():
                 
                 <div class='info-item'>
                     <div>
-                        <h4 style="margin: 0; color: var(--secondary);">🏥 Clinique SHAHIDI-AI</h4>
+                        <h4 style="margin: 0; color: var(--secondary);">🏥 Clinique MEDICINE-AI</h4>
                         <p style="margin: 0.3rem 0 0; color: #666;">
                             123 Rue de la Santé<br>
-                            Dakar, Sénégal
+                            Thiès, Sénégal
                         </p>
                     </div>
                 </div>
@@ -125,7 +125,7 @@ def contact():
                     <div>
                         <h4 style="margin: 0; color: var(--secondary);">📞 Téléphone</h4>
                         <p style="margin: 0.3rem 0 0; color: #666;">
-                            +221 77 808 09 42<br>
+                            +221 77 135 48 03<br>
                             Urgences 24/7
                         </p>
                     </div>
@@ -135,8 +135,9 @@ def contact():
                     <div>
                         <h4 style="margin: 0; color: var(--secondary);">🌐 Réseaux Sociaux</h4>
                         <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-                            <a href="https://www.linkedin.com/in/sefdineahmed" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 LinkedIn</a>
-                            <a href="https://twitter.com/sefdineahmed" target="_blank" style="color: var(--primary); text-decoration: none;">🐦 Twitter</a>
+                            <a href="https://www.linkedin.com/in/mamadouthierno" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 LinkedIn</a>
+                            <a href="https://twitter.com/mamadouthierno" target="_blank" style="color: var(--primary); text-decoration: none;">🐦 Twitter</a>
+                            <a href="https://www.facebook.com/mamadouthierno" target="_blank" style="color: var(--primary); text-decoration: none;">📘 Facebook</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +182,11 @@ def contact():
         st.markdown("""
             <div class="footer">
                 <p>
-                    © 2025 <strong>SHAHIDI-AI</strong> | Propulsé par <strong>Ahmed Sefdine </strong><br>
+                     © 2025 <strong>MEDCINE-AI</strong> | Propulsé avec ❤️ par <strong>Mamadou Thierno FAYA </strong><br>
+                    Connectez-vous avec moi :
+                    <a href="https://www.linkedin.com/in/mamadouthierno" target="_blank" class="footer-icon">🔗 LinkedIn</a>
+                    <a href="https://twitter.com/mamadouthierno" target="_blank" class="footer-icon">🐦 Twitter</a>
+                    <a href="https://www.facebook.com/mamadouthierno" target="_blank" class="footer-icon">📘 Facebook</a>
                 </p>
             </div>
         """, unsafe_allow_html=True)
