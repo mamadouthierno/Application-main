@@ -4,11 +4,7 @@ import os
 from utils import LOGO_PATH  # On récupère ton chemin
 import base64
 
-st.set_page_config(
-    page_title="Médecine IA - Accueil",
-    page_icon="🧬",
-    layout="wide"
-)
+
 
 def get_base64_bg(path):
     with open(path, "rb") as image_file:
