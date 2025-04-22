@@ -168,7 +168,7 @@ def a_propos():
                     <h3 style="margin: 0.5rem 0; color: #0f172a;">{member['name']}</h3>
                     <p style="margin: 0; color: #334155;">{member['role']}</p>
                     <div style="background-color: #2e77d0; color: #fff; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-top: 10px; font-size: 0.85rem;">
-                        🏥 CHU Dakar
+                        🏥 CHU Thiès
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
