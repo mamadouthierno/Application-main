@@ -1,4 +1,4 @@
-# 📊 **shahidi - Plateforme d'Aide à la Décision** ⚕️
+# 📊 **Gastric - Plateforme d'Aide à la Décision** ⚕️
 
 C'est une application interactive développée avec **Streamlit** permettant d'estimer le temps de survie des patients atteints du cancer gastrique après traitement. L'objectif est d'offrir un outil d'aide à la décision basé sur l'intelligence artificielle et l'analyse de survie.
 
@@ -27,8 +27,8 @@ C'est une application interactive développée avec **Streamlit** permettant d'e
 ## 🔧 **Installation et exécution**
 ### 1️⃣ Cloner le projet
 ```bash
-git clone https://github.com/sefdineahmed/shahidi.git
-cd Ushahidi
+git clone https://github.com/mamadouthierno/Gastric.git
+cd Gastric
 ```
 
 ### 2️⃣ Installer les dépendances
@@ -47,13 +47,12 @@ streamlit run main.py
 ---
 
 ## 📬 **Contact**
-📍 **Université Alioune Diop de Bambey, Sénégal**  
-📧 **Email** : ahmed.sefdine@uadb.edu.sn  
-🌐 **LinkedIn** : [linkedin.com/in/sefdineahmed](https://linkedin.com/in/sefdineahmed)  
+📍 **Université Ibader THIAM de thiès, Sénégal**  
+📧 **Email** : mamadouthierno4@gmial.com  
+🌐 **LinkedIn** : [linkedin.com/in/mamadouthierno](https://linkedin.com/in/mamadouthierno)  
 
 ---
 
-Ce projet a été réalisé dans le cadre du mémoire de Master 2 en **Statistique et Informatique Décisionnelle**.
+Ce projet a été réalisé dans le cadre du mémoire de Master 2 en **Science de Données Inteligence Artificielle**.
 
 ---
-"# Application-main" 
