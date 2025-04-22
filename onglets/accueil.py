@@ -139,17 +139,26 @@ def accueil():
                 0% {{ opacity: 0; transform: translateY(50px); }}
                 100% {{ opacity: 1; transform: translateY(0); }}
             }}
+            .benefits {{
+                list-style: none;
+                padding-left: 0;
+            }}
+
+            .benefits li::before {{
+                content: "✔️ ";
+                color: green;
+                margin-right: 5px;
+            }}
         </style>
 
         <!-- CONTENU HTML -->
+
+        <!-- Bloc principal avec image de fond -->
         <div class="custom-bg">
-            <h1 class="main-title"> Bienvenue dans notre Plateforme d'innovation Médicale </h1>
-            <p class="sub-title">
-                Plateforme IA de pointe pour la lutte contre les cancers digestifs
-            </p>
+            <h1 class="main-title">L'Ère Nouvelle de la Médecine Intelligente</h1>
+            <h2 class="sub-title">Plateforme IA de pointe pour la lutte contre les cancers digestifs</h2>
             <button class="custom-btn">Découvrir la Technologie</button>
         </div>
-
         <!-- SECTION IMPRESSIONNANTE -->
         <section class="impression-section">
             <h2>Révolution dans la prise en charge des cancers digestifs</h2>
