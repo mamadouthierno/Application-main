@@ -68,12 +68,26 @@ def a_propos():
             </div>
             """, unsafe_allow_html=True)
 
-    # Performance des modèles (inchangé)
-    # [...]
+            st.markdown('<div class="image-container">', unsafe_allow_html=True)
+            st.image("assets/ibs_curve.jpeg", caption="Courbe IBS - Comparaison des modèles", use_container_width=True)
+            st.markdown('</div>', unsafe_allow_html=True)
+        except Exception as e:
+            st.error(f"Erreur de chargement de l'image : {str(e)}")
 
-    # Analyse des Performances (inchangé)
-    # [...]
-
+    with col2:
+        st.markdown("""
+        <div style="background: rgba(white); padding: 1rem; border-radius: 10px;">
+            <h3>Interprétation des Résultats</h3>
+            <ul style="line-height: 1.8;">
+                <li>📉 Meilleure performance du modèle Deep Survival</li>
+                <li>⏱ Stabilité temporelle des prédictions</li>
+                <li>🎯 Faible erreur intégrée (IBS)</li>
+            </ul>
+            <div style="background-color: #2e77d0; color: #fff; padding: 6px 12px; border-radius: 20px; display: inline-block; margin-top: 10px; font-size: 0.85rem;">
+                🔬 Validation croisée (k=10)
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
     # Équipe de Recherche
     st.markdown("## Équipe de Recherche", unsafe_allow_html=True)
     cols = st.columns(3)
