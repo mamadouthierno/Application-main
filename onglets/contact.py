@@ -140,7 +140,7 @@ def contact():
                                 <div style="font-size: 2rem; margin-right: 1rem;">✅</div>
                                 <div>
                                     <h3 style="margin: 0; color: #2e77d0;">Message envoyé !</h3>
-                                    <p style="margin: 0.3rem 0 0; color: #666;">Nous vous répondrons dans les 24 heures</p>
+                                    <p style="margin: 0.3rem 0 0; color: #666;">La répondrons dans les 24 heures</p>
                                 </div>
                             </div>
                         """, unsafe_allow_html=True)
