@@ -11,3 +11,4 @@ plotly
 Pillow
 fpdf2
 keras
+streamlit-lottie
