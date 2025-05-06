@@ -54,9 +54,6 @@ def send_email(name, sender_email, message):
 </html>
 """
 
-
-
-
         msg.attach(MIMEText(html, "html"))
 
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
@@ -99,7 +96,7 @@ def contact():
             <div class='contact-header'>
                 <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">\U0001F4EC Contacte L'équipe Médicale</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">
-                    Question ? Projet ? Nous répondons dans les 24h
+                     Nous répondons dans les 24h
                 </p>
             </div>
         """, unsafe_allow_html=True)
