@@ -19,40 +19,40 @@ def send_email(name, sender_email, message):
         msg["To"] = EMAIL_RECEIVER
         msg["Subject"] = f"\U0001F4EC Nouveau contact MDCINE-AI : {name}"
 
-        html = f"""
-        <html>
-          <body style="margin: 0; font-family: 'Segoe UI', sans-serif;">
-            <div style="background: #f8faff; padding: 40px;">
-              <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
-                <div style="padding: 40px; text-align: center;">
-                  <img src="https://i.ibb.co.com/logo.png" alt="MED-AI Logo" style="height: 60px; margin-bottom: 30px;">
-                  <div style="background: linear-gradient(135deg, #2e77d0, #22d3ee); padding: 20px; border-radius: 12px;">
-                    <h2 style="color: white; margin: 0;">Nouveau message de {name}</h2>
-                  </div>
-                  <div style="padding: 30px 20px; text-align: left;">
-                    <div style="margin-bottom: 25px;">
-                      <p style="font-size: 16px; color: #444; margin: 8px 0;">
-                        <strong style="color: #2e77d0;">\U0001F4E7 Email :</strong><br>
-                        {sender_email}
-                      </p>
-                      <p style="font-size: 16px; color: #444; margin: 8px 0;">
-                        <strong style="color: #2e77d0;">\U0001F4DD Message :</strong><br>
-                        <div style="background: #f8faff; padding: 15px; border-radius: 8px; margin-top: 10px;">
-                          {message}
-                        </div>
-                      </p>
-                    </div>
-                    <hr style="border: 1px solid #eee; margin: 30px 0;">
-                    <p style="font-size: 14px; color: #888; text-align: center;">
-                      Ce message a été envoyé via le formulaire de contact MED-AI
-                    </p>
-                  </div>
+html = f"""
+<html>
+  <body style="margin: 0; font-family: 'Segoe UI', sans-serif;">
+    <div style="background: #f8faff; padding: 40px;">
+      <div style="max-width: 600px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 4px 24px rgba(0,0,0,0.08);">
+        <div style="padding: 40px; text-align: center;">
+          <img src="https://i.ibb.co/0Jmshvb/logo.png" alt="MED-AI Logo" style="height: 60px; margin-bottom: 30px;">
+          <div style="background: linear-gradient(135deg, #2e77d0, #22d3ee); padding: 20px; border-radius: 12px;">
+            <h2 style="color: white; margin: 0;">Nouveau message de {name}</h2>
+          </div>
+          <div style="padding: 30px 20px; text-align: left;">
+            <div style="margin-bottom: 25px;">
+              <p style="font-size: 16px; color: #444; margin: 8px 0;">
+                <strong style="color: #2e77d0;">📧 Email :</strong><br>
+                {sender_email}
+              </p>
+              <p style="font-size: 16px; color: #444; margin: 8px 0;">
+                <strong style="color: #2e77d0;">📝 Message :</strong><br>
+                <div style="background: #f8faff; padding: 15px; border-radius: 8px; margin-top: 10px;">
+                  {message}
                 </div>
-              </div>
+              </p>
             </div>
-          </body>
-        </html>
-        """
+            <hr style="border: 1px solid #eee; margin: 30px 0;">
+            <p style="font-size: 14px; color: #888; text-align: center;">
+              Ce message a été envoyé via le formulaire de contact MED-AI
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+"""
 
         msg.attach(MIMEText(html, "html"))
 
