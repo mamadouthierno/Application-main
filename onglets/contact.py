@@ -8,7 +8,7 @@ from email.mime.multipart import MIMEMultipart
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 EMAIL_SENDER = "votre-email@gmail.com"
-EMAIL_PASSWORD = "12_SEFD"  
+EMAIL_PASSWORD = "12_SEFD"
 EMAIL_RECEIVER = "mamadouthierno4@gmail.com"
 
 def send_email(name, sender_email, message):
@@ -17,8 +17,8 @@ def send_email(name, sender_email, message):
         msg = MIMEMultipart()
         msg["From"] = EMAIL_SENDER
         msg["To"] = EMAIL_RECEIVER
-        msg["Subject"] = f"📬 Nouveau contact MDCINE-AI : {name}"
-        
+        msg["Subject"] = f"\U0001F4EC Nouveau contact MDCINE-AI : {name}"
+
         html = f"""
         <html>
           <body style="margin: 0; font-family: 'Segoe UI', sans-serif;">
@@ -32,11 +32,11 @@ def send_email(name, sender_email, message):
                   <div style="padding: 30px 20px; text-align: left;">
                     <div style="margin-bottom: 25px;">
                       <p style="font-size: 16px; color: #444; margin: 8px 0;">
-                        <strong style="color: #2e77d0;">📧 Email :</strong><br>
+                        <strong style="color: #2e77d0;">\U0001F4E7 Email :</strong><br>
                         {sender_email}
                       </p>
                       <p style="font-size: 16px; color: #444; margin: 8px 0;">
-                        <strong style="color: #2e77d0;">📝 Message :</strong><br>
+                        <strong style="color: #2e77d0;">\U0001F4DD Message :</strong><br>
                         <div style="background: #f8faff; padding: 15px; border-radius: 8px; margin-top: 10px;">
                           {message}
                         </div>
@@ -53,17 +53,17 @@ def send_email(name, sender_email, message):
           </body>
         </html>
         """
-        
+
         msg.attach(MIMEText(html, "html"))
 
         with smtplib.SMTP(SMTP_SERVER, SMTP_PORT) as server:
             server.starttls()
             server.login(EMAIL_SENDER, EMAIL_PASSWORD)
             server.sendmail(EMAIL_SENDER, EMAIL_RECEIVER, msg.as_string())
-        
+
         return True
     except Exception as e:
-        st.error(f"❌ Erreur d'envoi : {str(e)}")
+        st.error(f"\u274C Erreur d'envoi : {str(e)}")
         return False
 
 def validate_email(email):
@@ -76,11 +76,11 @@ def contact():
 
     with st.container():
         st.markdown("<div class='main-container'>", unsafe_allow_html=True)
-        
+
         # En-tête
         st.markdown("""
             <div class='contact-header'>
-                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">📬 Contacte L'équipe Médicale</h1>
+                <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">\U0001F4EC Contacte L'équipe Médicale</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">
                     Question ? Projet ? Nous répondons dans les 24h
                 </p>
@@ -89,73 +89,35 @@ def contact():
 
         # Grille principale
         col1, col2 = st.columns([2, 1], gap="large")
-        
+
         with col1:
             with st.form("contact_form"):
-                st.markdown("<div class='form-card'>", unsafe_allow_html=True)
-                
-                # Formulaire
-                st.markdown("<div class='input-field'>", unsafe_allow_html=True)
                 name = st.text_input("Nom Complet *", placeholder="Dr. SAMB")
-                st.markdown("</div>", unsafe_allow_html=True)
-                
-                st.markdown("<div class='input-field'>", unsafe_allow_html=True)
                 email = st.text_input("Email Professionnel *", placeholder="contact@clinique.com")
-                st.markdown("</div>", unsafe_allow_html=True)
-                
-                st.markdown("<div class='input-field'>", unsafe_allow_html=True)
-                message = st.text_area("Message *", height=200, 
-                                    placeholder="Décrivez votre demande en détail...")
-                st.markdown("</div>", unsafe_allow_html=True)
-                
+                message = st.text_area("Message *", height=200, placeholder="Décrivez votre demande en détail...")
                 submitted = st.form_submit_button("Envoyer le Message ✉️", use_container_width=True)
-                st.markdown("</div>", unsafe_allow_html=True)
 
         with col2:
-            # Informations de contact
-            st.markdown("<div class='contact-info-card'>", unsafe_allow_html=True)
             st.markdown("""
-                <h3 style="color: var(--primary); margin-bottom: 1.5rem;">📌 Coordonnées</h3>
-                
-                <div class='info-item'>
-                    <div>
-                        <h4 style="margin: 0; color: var(--secondary);">🏥 Clinique MEDICINE-AI</h4>
-                        <p style="margin: 0.3rem 0 0; color: #666;">
-                            123 Rue de la Santé<br>
-                            Thiès, Sénégal
-                        </p>
-                    </div>
-                </div>
-                
-                <div class='info-item'>
-                    <div>
-                        <h4 style="margin: 0; color: var(--secondary);">📞 Téléphone</h4>
-                        <p style="margin: 0.3rem 0 0; color: #666;">
-                            +221 77 135 48 03<br>
-                            Urgences 24/7
-                        </p>
-                    </div>
-                </div>
-                
-                <div class='info-item'>
-                    <div>
-                        <h4 style="margin: 0; color: var(--secondary);">🌐 Réseaux Sociaux</h4>
-                        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-                            <a href="https://www.linkedin.com/in/mamadouthierno" target="_blank" style="color: var(--primary); text-decoration: none;">🔗 LinkedIn</a>
-                            <a href="https://twitter.com/mamadouthierno" target="_blank" style="color: var(--primary); text-decoration: none;">🐦 Twitter</a>
-                            <a href="https://www.facebook.com/mamadouthierno" target="_blank" style="color: var(--primary); text-decoration: none;">📘 Facebook</a>
-                        </div>
-                    </div>
-                </div>
+                ### 📌 Coordonnées
+                **🏥 Clinique MEDICINE-AI**  
+                123 Rue de la Santé, Thiès, Sénégal
+
+                **📞 Téléphone**  
+                +221 77 135 48 03 (Urgences 24/7)
+
+                **🌐 Réseaux Sociaux**  
+                🔗 [LinkedIn](https://www.linkedin.com/in/mamadouthierno)  
+                🐦 [Twitter](https://twitter.com/mamadouthierno)  
+                📘 [Facebook](https://www.facebook.com/mamadouthierno)
             """, unsafe_allow_html=True)
-            st.markdown("</div>", unsafe_allow_html=True)
 
         # Validation et envoi
         if submitted:
             if not all([name, email, message]):
-                st.error("🚨 Tous les champs obligatoires (*) doivent être remplis")
+                st.error("\U0001F6A8 Tous les champs obligatoires (*) doivent être remplis")
             elif not validate_email(email):
-                st.error("📧 Format d'email invalide")
+                st.error("\U0001F4E7 Format d'email invalide")
             else:
                 with st.spinner("Envoi en cours..."):
                     if send_email(name, email, message):
@@ -163,7 +125,7 @@ def contact():
                             <div style="display: flex; align-items: center; padding: 1.5rem; background: #f0faff; border-radius: 12px; margin: 2rem 0;">
                                 <div style="font-size: 2rem; margin-right: 1rem;">✅</div>
                                 <div>
-                                    <h3 style="margin: 0; color: var(--primary);">Message envoyé !</h3>
+                                    <h3 style="margin: 0; color: #2e77d0;">Message envoyé !</h3>
                                     <p style="margin: 0.3rem 0 0; color: #666;">Nous vous répondrons dans les 24 heures</p>
                                 </div>
                             </div>
@@ -183,16 +145,19 @@ def contact():
                 </iframe>
             </div>
         """, unsafe_allow_html=True)
-        
+
         # Pied de page
         st.markdown("""
             <div class="footer">
                 <p>
-                     © 2025 <strong>MEDCINE-AI</strong> | Propulsé avec ❤️ par <strong>Mamadou Thierno FAYE </strong><br>
+                     © 2025 <strong>MEDCINE-AI</strong> | Propulsé avec ❤️ par <strong>Mamadou Thierno FAYE</strong><br>
                     Connectez-vous avec moi :
-                    <a href="https://www.linkedin.com/in/mamadouthierno" target="_blank" class="footer-icon">🔗 LinkedIn</a>
-                    <a href="https://twitter.com/mamadouthierno" target="_blank" class="footer-icon">🐦 Twitter</a>
-                    <a href="https://www.facebook.com/mamadouthierno" target="_blank" class="footer-icon">📘 Facebook</a>
+                    <a href="https://www.linkedin.com/in/mamadouthierno" target="_blank">🔗 LinkedIn</a>
+                    <a href="https://twitter.com/mamadouthierno" target="_blank">🐦 Twitter</a>
+                    <a href="https://www.facebook.com/mamadouthierno" target="_blank">📘 Facebook</a>
                 </p>
             </div>
         """, unsafe_allow_html=True)
+
+if __name__ == "__main__":
+    contact()
