@@ -74,6 +74,22 @@ def validate_email(email):
 def contact():
     """Interface de contact professionnelle avec style modernisé et liens vers réseaux sociaux"""
 
+    st.markdown("""
+        <style>
+            .main-container {
+                background-color: #e6f0ff;
+                padding: 2rem;
+                border-radius: 15px;
+            }
+            .footer {
+                margin-top: 3rem;
+                text-align: center;
+                color: #666;
+                font-size: 0.9rem;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
     with st.container():
         st.markdown("<div class='main-container'>", unsafe_allow_html=True)
 
@@ -82,7 +98,7 @@ def contact():
             <div class='contact-header'>
                 <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">\U0001F4EC Contacte L'équipe Médicale</h1>
                 <p style="font-size: 1.2rem; opacity: 0.9;">
-                    Nous répondons dans les 24h
+                    Question ? Projet ? Nous répondons dans les 24h
                 </p>
             </div>
         """, unsafe_allow_html=True)
