@@ -31,28 +31,28 @@ LOGO_PATH = "assets/background.jpeg"
 # Définition des membres de l'équipe
 TEAM_MEMBERS = [
     {
-        "name": "Pr. Aba Diop",
-        "Etablissement": "Université Alioune Diop de Bamby",
+        "name": "Pr. Mamadou BOUSSO",
+        "Etablissement": "Université Ibader THIAM de Thiès",
         "role": "Maître de Conférences",
-        "email": "aba.diop@example.com",
-        "linkedin": "https://linkedin.com/in/abadiop",
-        "photo": "assets/team/aba.jpeg"
+        "email": "bousso.mamadou@example.com",
+        "linkedin": "https://linkedin.com/in/bousso",
+        "photo": "assets/team/bousso.jpeg"
     },
     {
-        "name": "PhD. Idrissa Sy",
-        "Etablissement": "Université Alioune Diop de Bamby",
+        "name": "Dr. Mouhadou M ALLAYA",
+        "Etablissement": "Université Ibader THIAM de Thiès",
         "role": "Enseignant Chercheur",
-        "email": "idrissa.sy@example.com",
-        "linkedin": "https://linkedin.com/in/idrissasy",
-        "photo": "assets/team/sy.jpeg"
+        "email": "allaya.mouhamadou@example.com",
+        "linkedin": "https://linkedin.com/in/allaya",
+        "photo": "assets/team/allaya.jpeg"
     },
     {
-        "name": "M. Ahmed Sefdine",
-        "Etablissement": "Université Alioune Diop de Bamby",
+        "name": "M. Mamadou Thierno FAYE",
+        "Etablissement": "Université Ibader THIAM de Thiès",
         "role": "Étudiant",
-        "email": "ahmed.sefdine@example.com",
-        "linkedin": "https://linkedin.com/in/sefdineahmed",
-        "photo": "assets/team/sefdine.jpeg"
+        "email": "mamdou.faye@example.com",
+        "linkedin": "https://linkedin.com/in/mamadou",
+        "photo": "assets/team/mamadou.jpeg"
     }
 ]
 
