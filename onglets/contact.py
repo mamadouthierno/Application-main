@@ -74,19 +74,17 @@ def validate_email(email):
 def contact():
     """Interface de contact professionnelle avec style modernisé et liens vers réseaux sociaux"""
 
+    # Appliquer la couleur de fond globale
     st.markdown("""
         <style>
-            .main-container {
-                background-color: #e6f0ff;
-                padding: 2rem;
-                border-radius: 15px;
-            }
-            .footer {
-                margin-top: 3rem;
-                text-align: center;
-                color: #666;
-                font-size: 0.9rem;
-            }
+        .main-container {
+            background-color: #f0f4f8;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+        body {
+            background-color: #f0f4f8;
+        }
         </style>
     """, unsafe_allow_html=True)
 
