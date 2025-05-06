@@ -19,7 +19,7 @@ def send_email(name, sender_email, message):
         msg["To"] = EMAIL_RECEIVER
         msg["Subject"] = f"\U0001F4EC Nouveau contact MDCINE-AI : {name}"
 
-html = f"""
+        html = f"""
 <html>
   <body style="margin: 0; font-family: 'Segoe UI', sans-serif;">
     <div style="background: #f8faff; padding: 40px;">
@@ -53,6 +53,9 @@ html = f"""
   </body>
 </html>
 """
+
+
+
 
         msg.attach(MIMEText(html, "html"))
 
